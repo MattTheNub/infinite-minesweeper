@@ -110,9 +110,9 @@ impl speedy2d::window::WindowHandler for WindowHandler {
 										Vector2::new(x as f32, y as f32),
 										Vector2::new((x + 20) as f32, (y + 20) as f32),
 									),
-									if self.mouse_pos.x > x
-										&& self.mouse_pos.x <= (x + 20) && self.mouse_pos.y > y
-										&& self.mouse_pos.y <= (y + 20)
+									if self.mouse_pos.x >= x
+										&& self.mouse_pos.x < (x + 20) && self.mouse_pos.y >= y
+										&& self.mouse_pos.y < (y + 20)
 									{
 										*colors::HOVER
 									} else {
